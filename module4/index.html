@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Moving Lines on Hover</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg">
+        <!-- Lines from top-left corner -->
+        <line class="line" x1="0" y1="0" x2="100%" y2="100%" stroke="red">
+            <animate attributeName="x2" values="100%;0%;100%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="100%;0%;100%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="0" y1="0" x2="100%" y2="50%" stroke="blue">
+            <animate attributeName="x2" values="100%;50%;100%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="0" y1="0" x2="50%" y2="100%" stroke="green">
+            <animate attributeName="x2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="100%;50%;100%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="0" y1="0" x2="100%" y2="0%" stroke="orange">
+            <animate attributeName="x2" values="100%;0%;100%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="0%;100%;0%" dur="3s" repeatCount="indefinite" />
+        </line>
+
+        <!-- Lines from top-right corner -->
+        <line class="line" x1="100%" y1="0" x2="0" y2="100%" stroke="purple">
+            <animate attributeName="x2" values="0%;100%;0%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="100%;0%;100%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="100%" y1="0" x2="0" y2="50%" stroke="red">
+            <animate attributeName="x2" values="0%;50%;0%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="100%" y1="0" x2="50%" y2="100%" stroke="blue">
+            <animate attributeName="x2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="100%;50%;100%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="100%" y1="0" x2="0" y2="0%" stroke="green">
+            <animate attributeName="x2" values="0%;100%;0%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="0%;100%;0%" dur="3s" repeatCount="indefinite" />
+        </line>
+
+        <!-- Lines from bottom-left corner -->
+        <line class="line" x1="0" y1="100%" x2="100%" y2="0" stroke="orange">
+            <animate attributeName="x2" values="100%;0%;100%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="0%;100%;0%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="0" y1="100%" x2="50%" y2="0" stroke="purple">
+            <animate attributeName="x2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="0%;50%;0%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="0" y1="100%" x2="100%" y2="50%" stroke="red">
+            <animate attributeName="x2" values="100%;0%;100%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="0" y1="100%" x2="50%" y2="50%" stroke="blue">
+            <animate attributeName="x2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="50%;0%;50%" dur="3s" repeatCount="indefinite" />
+        </line>
+
+        <!-- Lines from bottom-right corner -->
+        <line class="line" x1="100%" y1="100%" x2="0" y2="0" stroke="green">
+            <animate attributeName="x2" values="0%;100%;0%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="0%;100%;0%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="100%" y1="100%" x2="50%" y2="0" stroke="orange">
+            <animate attributeName="x2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="0%;50%;0%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="100%" y1="100%" x2="0" y2="50%" stroke="purple">
+            <animate attributeName="x2" values="0%;50%;0%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line class="line" x1="100%" y1="100%" x2="50%" y2="50%" stroke="red">
+            <animate attributeName="x2" values="50%;100%;50%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="50%;0%;50%" dur="3s" repeatCount="indefinite" />
+        </line>
+
+        <!-- Text in the middle -->
+        <text x="50%" y="50%">My name is Jahnavi. This is my example of SVG</text>
+    </svg>
+
+    <script>
+        // Function to generate random values for the animate elements
+        function setRandomPositions() {
+            const lines = document.querySelectorAll('.line');
+            lines.forEach(line => {
+                const x2 = Math.random() * 100;
+                const y2 = Math.random() * 100;
+                line.querySelector('animate[attributeName="x2"]').setAttribute('values', `${x2}%;${100 - x2}%;${x2}%`);
+                line.querySelector('animate[attributeName="y2"]').setAttribute('values', `${y2}%;${100 - y2}%;${y2}%`);
+            });
+        }
+
+        // Set random positions on hover
+        document.querySelectorAll('.line').forEach(line => {
+            line.addEventListener('mouseover', setRandomPositions);
+        });
+
+        // Initialize with random positions
+        setRandomPositions();
+    </script>
+</body>
+</html>
