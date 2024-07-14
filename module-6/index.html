@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USD to INR Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>USD to INR Converter</h1>
+    </header>
+    <main>
+        <div id="form-section">
+            <form id="converter-form">
+                <label for="usd-value">USD Amount:</label>
+                <input type="text" id="usd-value" name="usd-value">
+                
+                <button type="submit">Convert</button>
+            </form>
+        </div>
+        <div id="dynamic-content">
+            <h2>Converted Amount</h2>
+            <div id="result-area"></div>
+        </div>
+    </main>
+    <script src="converter.js"></script>
+</body>
+</html>
