@@ -5,7 +5,7 @@ const story = {
             { text: "Investigate the anomaly", consequence: "investigateAnomaly" },
             { text: "Land on the planet", consequence: "landOnPlanet" }
         ],
-        image: "https://static.wikia.nocookie.net/nomanssky_gamepedia/images/d/df/Ano_space.jpg/revision/latest?cb=20170818201220"
+        image: "https://static.wikia.nocookie.net/orville/images/2/2c/Spatial_fold.jpg/revision/latest?cb=20181018230620"
     },
     investigateAnomaly: {
         text: "As you get closer, you realize it's a wormhole. Do you enter it or retreat?",
