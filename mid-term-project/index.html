@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Adventure: Choose Your Own Path</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Space Adventure: Choose Your Own Path</h1>
+        <div id="story-text"></div>
+        <div id="choices"></div>
+        <div id="image-container"></div>
+        <button id="restart-button" style="display: none;">Restart Adventure</button>
+    </div>
+
+    <footer>
+        <div class="addendum">
+            <h2>Addendum</h2>
+            <p>In developing this "Choose Your Own Adventure" game, I made several key decisions to enhance the user experience and create an engaging narrative. The space exploration theme was chosen for its broad appeal and the numerous creative possibilities it offers.</p>
+            <p>One of the main challenges was creating a branching narrative that led to eight distinct endings while maintaining coherence and interest throughout. This required careful planning of the story structure and ensuring that each choice felt meaningful.</p>
+            <p>Implementing the game logic in JavaScript presented another challenge, particularly in managing the state of the game and updating the interface dynamically. This required a clear understanding of DOM manipulation and event handling.</p>
+            <p>The visual design aimed for a sleek, futuristic look that complements the space theme. The dark background with light text not only fits the theme but also reduces eye strain for users.</p>
+            <p>Integrating images for each stage of the story significantly enhanced the immersion but also required careful selection and editing to ensure they matched the narrative.</p>
+            <p>This project provided valuable insights into interactive storytelling, state management in web applications, and the importance of user interface design in creating engaging experiences. It also highlighted the need for thorough testing to ensure all narrative paths function correctly.</p>
+        </div>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
