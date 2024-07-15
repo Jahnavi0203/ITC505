@@ -5,7 +5,7 @@ const story = {
             { text: "Investigate the anomaly", consequence: "investigateAnomaly" },
             { text: "Land on the planet", consequence: "landOnPlanet" }
         ],
-        image: "https://i.ytimg.com/vi/LrrNu_m_9K4/maxresdefault.jpg"
+        image: "hi.jpg"
     },
     investigateAnomaly: {
         text: "As you get closer, you realize it's a wormhole. Do you enter it or retreat?",
