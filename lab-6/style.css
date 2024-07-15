@@ -1,0 +1,119 @@
+/* Reset default margin and padding */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper for layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Header styles */
+header {
+    background-color: #4B0082; /* Indigo */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Main content area */
+.main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #E6E6FA; /* Lavender */
+    padding: 10px;
+    width: 200px;
+}
+
+/* Menu button styles */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-buttons button {
+    background-color: #8A2BE2; /* BlueViolet */
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu-buttons button:hover {
+    background-color: #7B68EE; /* MediumSlateBlue */
+}
+
+/* Content area styles */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #FFFFFF; /* White */
+}
+
+/* Footer styles */
+footer {
+    background-color: #4B0082;  /* Indigo */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Advertisement styles */
+.advertisement {
+    background-color: #E6E6FA; /* Lavender */
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto; /* Push to the right side */
+}
+
+/* Advertisement image styles */
+.advertisement img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Content image styles */
+.content img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Center the image and add bottom margin */
+}
+
+/* Task list styles */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#taskList li button {
+    background: #FF4500; /* OrangeRed */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
