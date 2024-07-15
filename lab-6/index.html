@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+<header>
+    <h1>To-Do List App</h1>
+</header>
+
+<div class="main">
+    <div class="sidebar">
+        <h3>Menu</h3>
+        <div class="menu-buttons">
+            <button onclick="navigateTo('home')">Home</button>
+            <button onclick="navigateTo('about')">About</button>
+            <button onclick="navigateTo('contact')">Contact</button>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <h2>To-Do List</h2>
+        
+        <form id="todoForm">
+            <input type="text" id="taskInput" placeholder="Enter a new task" required>
+            <button type="submit">Add Task</button>
+        </form>
+        
+        <ul id="taskList"></ul>
+    </div>
+
+    <div class="advertisement">
+        <h3>Advertisement</h3>
+        <a href="https://www.amazon.com/yueton-Kitchen-Mechanical-Minutes-Rotating/dp/B07H59ZL1L/ref=sr_1_3?crid=3V4R7GJV19OUZ&dib=eyJ2IjoiMSJ9.vbJMURXn3PBW9ul44vNiQBSrd6mbiQdmB5kCeOLr7hileo4GdtqAVb_2ouS6b6ijUdmVZ5TJvJ83duAJvqtVcc67oh1Ru5Og3pknaznBg1ISfxZVzIzgCwYL_gWX8_P1_Mi9ZuQhHDVq0wmW5ZXW5wy90bNtJ52s7LsuZ79IxE0t7qtRC30nmqd7mXGf3QTpigGQFEA80-l2_M6qgj18sM0pIoFgJGYFMFU4brDEfpRoFqmKiyea7lQ77qZdDhbxASIJHE-c850vZV1SXbIEabnfRomQoGcELpc-5CJXzWA.mjLip7RzHI4sQkjsmhfKDtcy2HFua6IBMS9DLVdOO7Q&dib_tag=se&keywords=pomodoro&qid=1720933233&sprefix=pomorado%2Caps%2C136&sr=8-3" target="_blank"><br><br><br><br><br><br><br><br><br><br>
+            <img src="pomodoro.jpg" alt="Advertisement">
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    <p>Addendum: This simple to-do list app allows users to add, complete, and remove tasks. The JavaScript handles form submission, task list updates, and user interactions. One of the challenges was managing the dynamic updates to the task list, which was resolved by structuring the code to handle events efficiently.</p>
+
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+   
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</footer>
+
+</div><!-- .wrapper -->
+
+<script src="task.js"></script>
+</body>
+</html>
