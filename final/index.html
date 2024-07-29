@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Lights Out</h1>
+        <div id="play">
+            <button id="start">Start Game</button>
+            <button id="helpBtn">Help</button>
+        </div>
+        <div id="tiles" style="display: none;">
+            <div class="tile cornerTL" id="1"></div>
+            <div class="tile edgeT" id="2"></div>
+            <div class="tile edgeT" id="3"></div>
+            <div class="tile edgeT" id="4"></div>
+            <div class="tile cornerTR" id="5"></div>
+            <div class="tile edgeL" id="6"></div>
+            <div class="tile middle" id="7"></div>
+            <div class="tile middle" id="8"></div>
+            <div class="tile middle" id="9"></div>
+            <div class="tile edgeR" id="10"></div>
+            <div class="tile edgeL" id="11"></div>
+            <div class="tile middle" id="12"></div>
+            <div class="tile middle" id="13"></div>
+            <div class="tile middle" id="14"></div>
+            <div class="tile edgeR" id="15"></div>
+            <div class="tile edgeL" id="16"></div>
+            <div class="tile middle" id="17"></div>
+            <div class="tile middle" id="18"></div>
+            <div class="tile middle" id="19"></div>
+            <div class="tile edgeR" id="20"></div>
+            <div class="tile cornerBL" id="21"></div>
+            <div class="tile edgeB" id="22"></div>
+            <div class="tile edgeB" id="23"></div>
+            <div class="tile edgeB" id="24"></div>
+            <div class="tile cornerBR" id="25"></div>
+        </div>
+        <div id="move-counter"><span id="count"></span></div>
+        <div id="win" style="display: none;">
+            <h2>You Win!</h2>
+            <button onclick="location.reload()">Play Again</button>
+        </div>
+    </div>
+
+    <dialog id="helpDialog">
+        <h2>How to Play</h2>
+        <p>Click on tiles to toggle them and adjacent tiles on/off. Turn off all lights to win!</p>
+        <button id="closeBtn">Close</button>
+    </dialog>
+    <div class="addendum">
+        <h3>Addendum:</h3>
+<p>The objective of the game is to light out all the boxes on the board. When all boxes are lighted out, a message box will display "You Win!"</p>
+
+<p>The game features a 5x5 grid where some boxes are initially colored at random.</p>
+
+<p>Players must strategically click on the boxes and turn off all the on lights.</p>
+
+<p>The "New Game" button resets the board to its original state, allowing players to start a fresh game. The "Help" button opens a dialog with instructions and a close option.</p>
+
+<p>The game recognizes a win when every box is turned off. Players receive instant feedback and gratification upon completing the game.</p>
+</div>
+
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

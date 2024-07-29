@@ -1,0 +1,208 @@
+/* ---------- RESET STYLES ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- BODY STYLES ---------- */
+body {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #020202;
+    font-family: "Source Sans Pro", sans-serif;
+    animation: fadeIn 1s ease-in;
+    background: black;
+}
+
+body h1 {
+    font-size: 2.5rem;
+    text-shadow: 1px 5px 4px #5686b5;
+    margin-bottom: 2rem;
+    font-family: "Libre Baskerville", serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ---------- GAME CONTAINER ---------- */
+#game-container {
+    width: 22rem;
+    text-align: center;
+}
+
+#play {
+    margin-bottom: 1rem;
+}
+
+#tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.tile {
+    border: 1px solid #b547d0;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 0;
+    transition: all 150ms linear;
+}
+
+.tile:hover {
+    cursor: pointer;
+    border: 2px solid #5686b5;
+}
+
+.tile.on {
+    border: 2px solid #b547d0;
+    box-shadow: inset 0 0 1rem #b547d0;
+}
+
+.tile.on:hover {
+    border: 2px solid #b547d0;
+}
+
+/* ---------- MOVE COUNTER ---------- */
+#move-counter {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+footer{
+    color:white;
+}
+/* ---------- WIN SCREEN ---------- */
+#win {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#win h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.addendum{
+    color: white;
+}
+
+#win button {
+    padding: 0.5rem 1rem;
+    background: #5686b5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#win button:hover {
+    background: #003566;
+}
+
+/* ---------- DIALOG STYLES ---------- */
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+dialog h2 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+}
+
+dialog p {
+    margin-bottom: 20px;
+}
+
+dialog button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+dialog button:hover {
+    background: #0056b3;
+}
+
+/* ---------- FOOTER STYLES ---------- */
+footer {
+    margin-top: 2rem;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 1200px) {
+    #game-container {
+        width: 18rem;
+    }
+
+    .tile {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    body h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #game-container {
+        width: 15rem;
+    }
+
+    .tile {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    body h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #game-container {
+        width: 12rem;
+    }
+
+    .tile {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    body h1 {
+        font-size: 1.25rem;
+    }
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
